@@ -1,13 +1,16 @@
-# Copyright 2020 Nokia
-# Licensed under the BSD 3-Clause License.
-# SPDX-License-Identifier: BSD-3-Clause
-
 username: admin
-password: admin
-port: 6030
 timeout: 10s
-skip-verify: true
-encoding: json_ietf
+
+common_arista_subscriptios: &common_arista_sub
+  port: 6030
+  skip-verify: true
+  password: admin
+  encoding: json_ietf
+  subscriptions:
+    - eos_bgp_neighbors
+    - eos_cpu
+    - eos_mem
+    - eos_interface_stats
 
 targets:
   eos1:
