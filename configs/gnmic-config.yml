@@ -2,7 +2,6 @@ username: admin
 timeout: 10s
 
 common_arista_subscriptios: &common_arista_sub
-  port: 6030
   skip-verify: true
   password: admin
   encoding: json_ietf
@@ -14,9 +13,9 @@ common_arista_subscriptios: &common_arista_sub
     - eos-interface-oper-state
 
 targets:
-  eos1:
+  eos1: 6030
     insecure: true
-  eos2:
+  eos2: 6030
     insecure: true
 
 subscriptions:
