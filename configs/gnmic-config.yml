@@ -11,6 +11,7 @@ common_arista_subscriptios: &common_arista_sub
     - eos_cpu
     - eos_mem
     - eos_interface_stats
+    - eos-interface-oper-state
 
 targets:
   eos1:
@@ -47,6 +48,12 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
 
+  eos-interface-oper-state:
+    paths:
+      - /interfaces/interface[name=*]/state/oper-status
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
 
 outputs:
   prom:
