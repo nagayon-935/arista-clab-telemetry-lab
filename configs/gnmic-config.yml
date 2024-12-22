@@ -3,6 +3,7 @@ timeout: 10s
 
 common_arista_subscriptios: &common_arista_sub
   skip-verify: true
+  insecure: true
   password: admin
   encoding: json_ietf
   subscriptions:
@@ -13,10 +14,8 @@ common_arista_subscriptios: &common_arista_sub
     - show_ver
 
 targets:
-  eos1: 6030
-    insecure: true
-  eos2: 6030
-    insecure: true
+  eos1:6030: *common_arista_sub
+  eos2:6030: *common_arista_sub
 
 subscriptions:
   eos_bgp_neighbors:
