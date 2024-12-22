@@ -11,6 +11,7 @@ common_arista_subscriptios: &common_arista_sub
     - eos_cpu
     - eos_mem
     - eos_interface_stats
+    - show_ver
 
 targets:
   eos1:
