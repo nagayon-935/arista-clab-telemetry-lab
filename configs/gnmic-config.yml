@@ -48,8 +48,7 @@ subscriptions:
 
   show_ver:
     paths:
-      - eos_native:/Smash/routing/status/route
-      - eos_native:/Smash/routing/status/nexthop
+      - eos_native: /Smash/routing/status/route
     mode: stream
     stream-mode: sample
     sample-interval: 60s
